@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/food-shop/category/category-summary"],
+      "outputs": [
+        "coverage/libs/food-shop/category/category-summary"
+      ],
       "options": {
         "jestConfig": "libs/food-shop/category/category-summary/jest.config.ts",
         "passWithNoTests": true

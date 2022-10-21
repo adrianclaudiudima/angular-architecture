@@ -3,5 +3,5 @@ export interface RequestStatus {
   error?: {
     code?: number;
     message?: string;
-  }
+  };
 }

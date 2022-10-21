@@ -1,12 +1,14 @@
-import {Component, EventEmitter, Input, Output} from "@angular/core";
-import {Product, ProductOrder} from "@food-shop-architecture-workshop/core/model";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Product,
+  ProductOrder,
+} from '@food-shop-architecture-workshop/core/model';
 
 @Component({
-  selector: "app-favorite-list",
-  templateUrl: "favorite-list.component.html"
+  selector: 'app-favorite-list',
+  templateUrl: 'favorite-list.component.html',
 })
 export class FavoriteListComponent {
-
   @Input()
   products: Array<Product> = [];
 
@@ -33,5 +35,4 @@ export class FavoriteListComponent {
   removeProduct(product: Product) {
     this.removeProductFromFavorite.emit(product);
   }
-
 }

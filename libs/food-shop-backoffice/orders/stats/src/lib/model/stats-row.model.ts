@@ -5,5 +5,5 @@ export interface StatsRow {
   rightSummary: {
     data: number;
     dataSuffix: string;
-  }
+  };
 }

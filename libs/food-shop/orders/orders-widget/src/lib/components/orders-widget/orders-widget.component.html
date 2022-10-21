@@ -1,8 +1,8 @@
 <button
-  mat-icon-button
-  matTooltip="Show your orders"
-  [matBadge]="orders.length" matBadgeOverlap
-  [matBadgeHidden]="orders.length === 0"
-  (click)="ordersClicked.emit(true)">
-  <mat-icon svgIcon="memo-circle-info-solid" class="text-gray-800"></mat-icon>
+  (click)='ordersClicked.emit(true)'
+  [matBadgeHidden]='orders.length === 0'
+  [matBadge]='orders.length' mat-icon-button
+  matBadgeOverlap
+  matTooltip='Show your orders'>
+  <mat-icon class='text-gray-800' svgIcon='memo-circle-info-solid'></mat-icon>
 </button>

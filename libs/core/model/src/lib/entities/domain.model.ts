@@ -1,4 +1,4 @@
-import {RequestStatus} from "./request.model";
+import { RequestStatus } from './request.model';
 
 export interface DomainEntity<T> {
   domain: T;

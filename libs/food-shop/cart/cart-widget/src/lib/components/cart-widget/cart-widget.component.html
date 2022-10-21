@@ -1,19 +1,19 @@
 <button
-  mat-icon-button
-  [matBadge]="cartQuantity"
-  [matBadgeHidden]="cartQuantity === 0"
-  matBadgeOverlap #cartButton (click)="showCartDetails()">
-  <mat-icon svgIcon="basket" class="text-gray-800"></mat-icon>
+  #cartButton
+  (click)='showCartDetails()'
+  [matBadgeHidden]='cartQuantity === 0'
+  [matBadge]='cartQuantity' mat-icon-button matBadgeOverlap>
+  <mat-icon class='text-gray-800' svgIcon='basket'></mat-icon>
 </button>
 
 <ng-template #cartList>
   <app-cart-list
-    [products]="cartProducts"
-    (updateProductQuantity)="handleUpdateQuantity($event)"
-    (removeProductFromCart)="handleRemoveProduct($event)"
-    (navigateToProducts)="navigateToProductsPage()"
-    (navigateToCheckout)="navigateToCheckoutPage()"
-    class="w-full">
+    (navigateToCheckout)='navigateToCheckoutPage()'
+    (navigateToProducts)='navigateToProductsPage()'
+    (removeProductFromCart)='handleRemoveProduct($event)'
+    (updateProductQuantity)='handleUpdateQuantity($event)'
+    [products]='cartProducts'
+    class='w-full'>
   </app-cart-list>
 
 </ng-template>

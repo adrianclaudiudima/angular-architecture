@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/components/dom-portal"],
+      "outputs": [
+        "coverage/libs/shared/components/dom-portal"
+      ],
       "options": {
         "jestConfig": "libs/shared/components/dom-portal/jest.config.ts",
         "passWithNoTests": true

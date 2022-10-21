@@ -1,11 +1,10 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {StatsComponent} from "./components/stats/stats.component";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { StatsComponent } from './components/stats/stats.component';
 
 @NgModule({
   declarations: [StatsComponent],
   imports: [CommonModule],
-  exports: [StatsComponent]
+  exports: [StatsComponent],
 })
-export class FoodShopBackofficeOrdersStatsModule {
-}
+export class FoodShopBackofficeOrdersStatsModule {}

@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/food-shop/favorite/favorite-widget"],
+      "outputs": [
+        "coverage/libs/food-shop/favorite/favorite-widget"
+      ],
       "options": {
         "jestConfig": "libs/food-shop/favorite/favorite-widget/jest.config.ts",
         "passWithNoTests": true

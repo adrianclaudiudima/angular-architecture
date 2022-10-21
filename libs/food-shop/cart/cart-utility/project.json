@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/food-shop/cart/cart-utility"],
+      "outputs": [
+        "coverage/libs/food-shop/cart/cart-utility"
+      ],
       "options": {
         "jestConfig": "libs/food-shop/cart/cart-utility/jest.config.ts",
         "passWithNoTests": true

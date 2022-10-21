@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/components/input-radio-card"],
+      "outputs": [
+        "coverage/libs/shared/components/input-radio-card"
+      ],
       "options": {
         "jestConfig": "libs/shared/components/input-radio-card/jest.config.ts",
         "passWithNoTests": true

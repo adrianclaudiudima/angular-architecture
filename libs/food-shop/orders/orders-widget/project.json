@@ -5,7 +5,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/food-shop/orders/orders-widget"],
+      "outputs": [
+        "coverage/libs/food-shop/orders/orders-widget"
+      ],
       "options": {
         "jestConfig": "libs/food-shop/orders/orders-widget/jest.config.ts",
         "passWithNoTests": true

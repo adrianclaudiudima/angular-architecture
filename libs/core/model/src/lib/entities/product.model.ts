@@ -18,4 +18,4 @@ export interface Product {
   };
 }
 
-export type ProductType = "PIZZA" | "STEAK" | "PASTA" | "DRINKS"
+export type ProductType = 'PIZZA' | 'STEAK' | 'PASTA' | 'DRINKS';
