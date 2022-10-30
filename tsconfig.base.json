@@ -45,6 +45,12 @@
       "@food-shop-architecture-workshop/food-shop/favorite/favorite-widget": [
         "libs/food-shop/favorite/favorite-widget/src/index.ts"
       ],
+      "@food-shop-architecture-workshop/food-shop/orders/order-card-list": [
+        "libs/food-shop/orders/order-card-list/src/index.ts"
+      ],
+      "@food-shop-architecture-workshop/food-shop/orders/order-details": [
+        "libs/food-shop/orders/order-details/src/index.ts"
+      ],
       "@food-shop-architecture-workshop/food-shop/orders/orders-widget": [
         "libs/food-shop/orders/orders-widget/src/index.ts"
       ],
