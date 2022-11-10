@@ -17,7 +17,7 @@ import {FoodShopBackofficeOrdersStatsModule} from "@food-shop-architecture-works
 import {BoOrdersService} from "./services/bo-orders.service";
 import {BoOrdersPaginatedService} from "./services/bo-orders-paginated.service";
 import {BoOrdersStatsService} from "./services/bo-orders-stats.service";
-import {ApiServiceModule} from "../../../../libs/core/services/api-service/src/lib/api-service.module";
+import {ApiServiceModule} from "@food-shop-architecture-workshop/core/services/api-service";
 import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({

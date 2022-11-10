@@ -23,6 +23,7 @@
     "food-shop-product-product-list": "libs/food-shop/product/product-list",
     "shared-components-dom-portal": "libs/shared/components/dom-portal",
     "shared-components-input-number-button": "libs/shared/components/input-number-button",
-    "shared-components-input-radio-card": "libs/shared/components/input-radio-card"
+    "shared-components-input-radio-card": "libs/shared/components/input-radio-card",
+    "shared-pipes": "libs/shared/pipes"
   }
 }

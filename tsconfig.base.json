@@ -15,27 +15,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@food-shop-architecture-workshop/core/model": [
-        "libs/core/model/src/index.ts"
-      ],
-      "@food-shop-architecture-workshop/core/services/api-service": [
-        "libs/core/services/api-service/src/index.ts"
-      ],
-      "@food-shop-architecture-workshop/core/theme": [
-        "libs/core/theme/src/index.ts"
-      ],
+      "@food-shop-architecture-workshop/core/model": ["libs/core/model/src/index.ts"],
+      "@food-shop-architecture-workshop/core/services/api-service": ["libs/core/services/api-service/src/index.ts"],
+      "@food-shop-architecture-workshop/core/theme": ["libs/core/theme/src/index.ts"],
       "@food-shop-architecture-workshop/food-shop-backoffice/orders/order-status-table": [
         "libs/food-shop-backoffice/orders/order-status-table/src/index.ts"
       ],
       "@food-shop-architecture-workshop/food-shop-backoffice/orders/stats": [
         "libs/food-shop-backoffice/orders/stats/src/index.ts"
       ],
-      "@food-shop-architecture-workshop/food-shop/cart/cart-utility": [
-        "libs/food-shop/cart/cart-utility/src/index.ts"
-      ],
-      "@food-shop-architecture-workshop/food-shop/cart/cart-widget": [
-        "libs/food-shop/cart/cart-widget/src/index.ts"
-      ],
+      "@food-shop-architecture-workshop/food-shop/cart/cart-utility": ["libs/food-shop/cart/cart-utility/src/index.ts"],
+      "@food-shop-architecture-workshop/food-shop/cart/cart-widget": ["libs/food-shop/cart/cart-widget/src/index.ts"],
       "@food-shop-architecture-workshop/food-shop/category/category-summary": [
         "libs/food-shop/category/category-summary/src/index.ts"
       ],
@@ -68,7 +58,8 @@
       ],
       "@food-shop-architecture-workshop/shared/components/input-radio-card": [
         "libs/shared/components/input-radio-card/src/index.ts"
-      ]
+      ],
+      "@food-shop-architecture-workshop/shared/pipes": ["libs/shared/pipes/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

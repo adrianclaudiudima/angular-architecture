@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/food-shop-backoffice-ngrx",
         "index": "apps/food-shop-backoffice-ngrx/src/index.html",
@@ -15,9 +17,22 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/food-shop-backoffice-ngrx/src/favicon.ico",
-          "apps/food-shop-backoffice-ngrx/src/assets"
+          "apps/food-shop-backoffice-ngrx/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/core/theme/assets/icons/",
+            "output": "assets/icons/"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/core/theme/assets/food/",
+            "output": "assets/food/"
+          }
         ],
-        "styles": ["apps/food-shop-backoffice-ngrx/src/styles.scss"],
+        "styles": [
+          "libs/core/theme/styles/styles.scss",
+          "apps/food-shop-backoffice-ngrx/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -63,6 +78,10 @@
           "browserTarget": "food-shop-backoffice-ngrx:build:development"
         }
       },
+      "options": {
+        "port": 4205,
+        "proxyConfig": "proxy.conf.json"
+      },
       "defaultConfiguration": "development"
     },
     "extract-i18n": {
@@ -82,7 +101,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/food-shop-backoffice-ngrx"],
+      "outputs": [
+        "coverage/apps/food-shop-backoffice-ngrx"
+      ],
       "options": {
         "jestConfig": "apps/food-shop-backoffice-ngrx/jest.config.ts",
         "passWithNoTests": true

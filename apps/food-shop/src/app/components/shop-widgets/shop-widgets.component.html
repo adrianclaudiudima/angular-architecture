@@ -2,7 +2,7 @@
 
   <ng-container *ngIf="orders$ | async as ordersState">
     <ng-container *ngIf="ordersState.requestStatus.status === 'COMPLETED'">
-      <app-orders-widget (ordersClicked)="handleOrdersClicked()" [orders]="ordersState.domain"></app-orders-widget>
+      <app-orders-widget (ordersClicked)="handleOrdersClicked()" [ordersCount]="ordersState.domain.length"></app-orders-widget>
     </ng-container>
 
   </ng-container>

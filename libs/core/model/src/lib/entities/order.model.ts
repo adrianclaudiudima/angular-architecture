@@ -8,7 +8,7 @@ export interface Order {
   table: string;
   comment: string;
   orderStatus: OrderStatus;
-  orderDate: Date;
+  orderDateUnix: number;
   orderPaymentSummaryExtraFee: OrderPaymentSummaryExtraFee;
   paymentType?: 'card' | 'cash';
 }

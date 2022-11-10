@@ -7,7 +7,7 @@ import { Order } from '@food-shop-architecture-workshop/core/model';
 })
 export class OrdersWidgetComponent {
   @Input()
-  orders: Order[] = [];
+  ordersCount: number = 0;
 
   @Output()
   ordersClicked: EventEmitter<boolean> = new EventEmitter<boolean>();

@@ -9,6 +9,7 @@ import {
   ProductOrder,
 } from '@food-shop-architecture-workshop/core/model';
 import { buildCheckoutForm } from '@food-shop-architecture-workshop/food-shop/cart/cart-utility';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-checkout-details',
@@ -31,9 +32,7 @@ export class CheckoutDetailsComponent {
   @Output()
   createOrder: EventEmitter<Order> = new EventEmitter<Order>();
   @Output()
-  paymentMethodChanged: EventEmitter<InputRadioCardModel[]> = new EventEmitter<
-    InputRadioCardModel[]
-  >();
+  paymentMethodChanged: EventEmitter<InputRadioCardModel[]> = new EventEmitter<InputRadioCardModel[]>();
 
   constructor() {
     this.checkoutFormGroup = buildCheckoutForm();
@@ -58,7 +57,7 @@ export class CheckoutDetailsComponent {
         orderPaymentSummaryExtraFee: this.orderPaymentSummaryExtraFee,
         // workaround since we don't have a real backend
         orderStatus: OrderStatus.ORDER_NEW,
-        orderDate: new Date(),
+        orderDateUnix: moment().unix(),
       });
     }
   }

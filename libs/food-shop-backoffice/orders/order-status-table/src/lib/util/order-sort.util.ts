@@ -6,54 +6,38 @@ export const sortOrders = (orders: Order[], sort: Sort) => {
     switch (sort.active) {
       case 'id': {
         if (sort.direction === 'asc') {
-          return [...orders].sort((a, b) =>
-            a === b
-              ? 0
-              : (a.id as string).localeCompare(b.id as string)
-              ? -1
-              : 1
-          );
+          return [...orders].sort((a, b) => (a === b ? 0 : (a.id as string).localeCompare(b.id as string) ? -1 : 1));
         } else {
-          return [...orders].sort((a, b) =>
-            a === b
-              ? 0
-              : (a.id as string).localeCompare(b.id as string)
-              ? 1
-              : -1
-          );
+          return [...orders].sort((a, b) => (a === b ? 0 : (a.id as string).localeCompare(b.id as string) ? 1 : -1));
         }
       }
       case 'orderPaymentSummaryExtraFee.total': {
         if (sort.direction === 'asc') {
           return [...orders].sort((a, b) =>
-            a.orderPaymentSummaryExtraFee.total >
-            b.orderPaymentSummaryExtraFee.total
+            a.orderPaymentSummaryExtraFee.total > b.orderPaymentSummaryExtraFee.total
               ? 1
-              : a.orderPaymentSummaryExtraFee.total <
-                b.orderPaymentSummaryExtraFee.total
-              ? -1
-              : 0
+              : a.orderPaymentSummaryExtraFee.total < b.orderPaymentSummaryExtraFee.total
+                ? -1
+                : 0
           );
         } else {
           return [...orders].sort((a, b) =>
-            a.orderPaymentSummaryExtraFee.total >
-            b.orderPaymentSummaryExtraFee.total
+            a.orderPaymentSummaryExtraFee.total > b.orderPaymentSummaryExtraFee.total
               ? -1
-              : a.orderPaymentSummaryExtraFee.total <
-                b.orderPaymentSummaryExtraFee.total
-              ? 1
-              : 0
+              : a.orderPaymentSummaryExtraFee.total < b.orderPaymentSummaryExtraFee.total
+                ? 1
+                : 0
           );
         }
       }
       case 'orderDate': {
         if (sort.direction === 'asc') {
           return [...orders].sort((a, b) =>
-            a.orderDate > b.orderDate ? 1 : a.orderDate < b.orderDate ? -1 : 0
+            a.orderDateUnix > b.orderDateUnix ? 1 : a.orderDateUnix < b.orderDateUnix ? -1 : 0
           );
         } else {
           return [...orders].sort((a, b) =>
-            a.orderDate > b.orderDate ? -1 : a.orderDate < b.orderDate ? 1 : 0
+            a.orderDateUnix > b.orderDateUnix ? -1 : a.orderDateUnix < b.orderDateUnix ? 1 : 0
           );
         }
       }

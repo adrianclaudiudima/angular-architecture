@@ -1,7 +1,7 @@
 <app-dom-portal [selector]="'#rightHeaderId'">
-  <div class="flex flex-row ">
-    <button (click)="reloadStats()" mat-button class="bg-gray-800 text-white">Reload stats</button>
-    <button (click)="reloadOrders()" mat-button class="bg-gray-800 text-white">Get new orders</button>
+  <div class="flex flex-row gap-2">
+    <button (click)="reloadStats()" mat-stroked-button class=""><span class="font-medium">Reload stats</span></button>
+    <button (click)="reloadOrders()" mat-stroked-button class=""><span class="font-medium">Get new orders</span></button>
   </div>
 
 </app-dom-portal>
@@ -25,8 +25,7 @@
         (sortChanged)="handleSortChange($event)"
         [sort]="ordersState.sort"
         [paginationConfig]="ordersState.pagination"
-        (pageChanged)="handlePageChanged($event)"
-      >
+        (pageChanged)="handlePageChanged($event)">
       </app-order-table>
     </ng-container>
 

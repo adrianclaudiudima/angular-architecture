@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  vatRatePercentage: 19,
+  serviceChargePercentage: 10
 };
 
 /*

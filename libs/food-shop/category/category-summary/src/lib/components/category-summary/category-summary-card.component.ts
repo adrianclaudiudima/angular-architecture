@@ -7,20 +7,19 @@ import { CategorySummary } from '@food-shop-architecture-workshop/core/model';
   styleUrls: ['category-summary-card.component.scss'],
 })
 export class CategorySummaryCardComponent {
+  @Input()
   selected = 0;
 
   @Input()
   categorySummaries: CategorySummary[] = [];
 
   @Output()
-  categorySelected: EventEmitter<CategorySummary | undefined> =
-    new EventEmitter<CategorySummary | undefined>();
+  categorySelected: EventEmitter<CategorySummary | undefined> = new EventEmitter<CategorySummary | undefined>();
 
-  updateCategorySelected(
-    categorySummary: CategorySummary | undefined,
-    selectedIndex: number
-  ) {
+  updateCategorySelected(categorySummary: CategorySummary | undefined, selectedIndex: number) {
     this.selected = selectedIndex;
     this.categorySelected.emit(categorySummary);
   }
 }
+
+

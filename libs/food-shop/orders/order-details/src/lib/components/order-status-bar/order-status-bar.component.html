@@ -3,22 +3,26 @@
   <p class='text-sm font-semibold  text-gray-900'>
     <ng-container [ngSwitch]='order.orderStatus'>
       <ng-container *ngSwitchCase='ORDER_STATUS.ORDER_NEW'>
-        Submitted on {{order.orderDate | date : 'dd MMM YYYY hh:mm'}}
+        Submitted on <ng-container *ngTemplateOutlet="templateRef"></ng-container>
       </ng-container>
       <ng-container *ngSwitchCase='ORDER_STATUS.ORDER_ACCEPTED'>
-        Accepted on {{order.orderDate | date : 'dd MMM YYYY hh:mm'}}
+        Accepted on <ng-container *ngTemplateOutlet="templateRef"></ng-container>
       </ng-container>
       <ng-container *ngSwitchCase='ORDER_STATUS.ORDER_DELIVERED'>
-        Delivered on {{order.orderDate | date : 'dd MMM YYYY hh:mm'}}
+        Delivered on <ng-container *ngTemplateOutlet="templateRef"></ng-container>
       </ng-container>
       <ng-container *ngSwitchCase='ORDER_STATUS.ORDER_PROCESSING'>
-        Processed on {{order.orderDate | date : 'dd MMM YYYY hh:mm'}}
+        Processed on <ng-container *ngTemplateOutlet="templateRef"></ng-container>
       </ng-container>
       <ng-container *ngSwitchCase='ORDER_STATUS.ORDER_CANCELED'>
-        Canceled on {{order.orderDate | date : 'dd MMM YYYY hh:mm'}}
+        Canceled on <ng-container *ngTemplateOutlet="templateRef"></ng-container>
       </ng-container>
       <ng-container *ngSwitchDefault>Missing status</ng-container>
     </ng-container>
+
+    <ng-template #templateRef>
+      {{order.orderDateUnix | unixMoment | moment : 'ddd MMM YYYY hh:mm'}}
+    </ng-template>
   </p>
   <div class='mt-4' aria-hidden='true'>
     <div class='bg-gray-200 rounded-full overflow-hidden'>
